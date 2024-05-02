@@ -1,3 +1,5 @@
+import { DeleteButton } from '../DeleteButton';
+
 import styles from './Post.module.css';
 
 function Post({ id, title, content, authorName }) {
@@ -7,6 +9,8 @@ function Post({ id, title, content, authorName }) {
 			<p className={styles.content}>{content}</p>
 
 			<i className={styles.author}>{authorName}</i>
+
+			<DeleteButton postId={id} />
 		</div>
 	);
 }
